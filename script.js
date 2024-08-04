@@ -2,6 +2,7 @@ let computerChoice;
 let humanChoice;
 let computerScore = 0;
 let humanScore = 0;
+let tieScore = 0;
 
 // Function for getting the computer's choice.
 // Takes a number between 0 and 2, assigns number to one of 
@@ -36,7 +37,8 @@ function playRound (humanChoice, computerChoice) {
     // Compare the two choices and return a winner. Increment score based on victor.
     // First, check if the both players have the same choice.
     if (humanChoice === computerChoice) {
-        console.log("Tie! The war continues.")
+        console.log("Tie! The war continues.");
+        tieScore++;
     } else if ((humanChoice === "rock" && computerChoice === "scissors") 
         || (humanChoice === "scissors" && computerChoice === "paper")
         || (humanChoice === "paper" && computerChoice === "rock")) {
@@ -49,4 +51,6 @@ function playRound (humanChoice, computerChoice) {
     console.log("The humans currently score " + humanScore + " and the robots score " + computerScore + ".")
 }
 
-playRound(humanChoice, computerChoice);
+for (let round = 1; round < 6; round++) {
+    playRound(humanChoice, computerChoice)
+}
