@@ -23,8 +23,7 @@ function getComputerChoice() {
 
 // Function for getting the player's choice.
 function getHumanChoice() {
-    humanChoice = prompt("Make your choice! Rock, paper, or scissors?");
-    humanChoice = humanChoice.toLowerCase();
+    humanChoice = prompt("Make your choice! Rock, paper, or scissors?").toLowerCase();
     return humanChoice;
 }
 
@@ -35,22 +34,21 @@ function playRound (humanChoice, computerChoice) {
     console.log("The meatbag throws " + humanChoice + " and computer throws " + computerChoice + "!");
     
     // Compare the two choices and return a winner. Increment score based on victor.
-    // First, check if the both players have the same choice.
     if (humanChoice === computerChoice) {
         console.log("Tie! The war continues.");
         tieScore++;
     } else if ((humanChoice === "rock" && computerChoice === "scissors") 
         || (humanChoice === "scissors" && computerChoice === "paper")
         || (humanChoice === "paper" && computerChoice === "rock")) {
-            console.log("Victory for the meatbags!")
+            console.log("Victory for the meatbags!");
             humanScore++;
         } else {
-            console.log("Computer victory! The robot war will continue until morale improves.")
+            console.log("Computer victory! The robot war will continue until morale improves.");
             computerScore++;
         }
-    console.log("The humans currently score " + humanScore + " and the robots score " + computerScore + ".")
+    console.log("The humans currently score " + humanScore + " and the robots score " + computerScore + ".");
 }
 
 for (let round = 1; round < 6; round++) {
-    playRound(humanChoice, computerChoice)
+    playRound(humanChoice, computerChoice);
 }
