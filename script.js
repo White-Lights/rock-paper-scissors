@@ -5,8 +5,6 @@ let humanScore = 0;
 let tieScore = 0;
 
 // Function for getting the computer's choice.
-// Takes a number between 0 and 2, assigns number to one of 
-// three string options to be compared to player string.
 function getComputerChoice() {
     computerChoice = Math.floor(Math.random() * 3);
     if (computerChoice === 0) {
@@ -49,6 +47,6 @@ function playRound (humanChoice, computerChoice) {
     console.log("The humans currently score " + humanScore + " and the robots score " + computerScore + ".");
 }
 
-for (let round = 1; round < 6; round++) {
-    playRound(humanChoice, computerChoice);
-}
+// for (let round = 1; round < 6; round++) {
+//     playRound(humanChoice, computerChoice);
+// }

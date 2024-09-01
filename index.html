@@ -5,8 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="header"><p class="headerText">ROCK PAPER SCISSORS.</p></div>
 
+    <div class="gameContainer">
+        <div class="roundCounter"><p id="roundCount">ROUND 1.</p></div>
+        <div class="playerContainer">
+            <div id="humanPlayer">
+                <p id="playerName">PLAYER.</p>
+                <div>
+                    <button class="choiceSelector">R</button>
+                    <button class="choiceSelector">P</button>
+                    <button class="choiceSelector">S</button>
+                </div> 
+                <p>SCORE: 0</p>
+            </div>
+            <div id="computerPlayer">
+                <p>COMPUTER.</p>
+                <div>
+                    <button class="choiceSelector">R</button>
+                    <button class="choiceSelector">P</button>
+                    <button class="choiceSelector">S</button>
+                </div> 
+                <p>SCORE: 0</p>
+            </div>
+        </div>
+        <div class="accouncements">WELCOME! TO BEGIN THE ROUND, SELECT YOUR CHOICE.</div>
+    </div>
+    <div class="settingsDiv">
+        <button>RESET.</button>
+        <button>CHANGE NAME.</button>
+    </div>
 </body>
 </html>

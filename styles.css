@@ -1,0 +1,83 @@
+* {
+    background: #a5a5a5;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header,
+.headerText {
+    background-color: #b42b2b;
+    margin: 0px;
+}
+
+.header {
+    margin-bottom: 100px;
+}
+
+.headerText {
+    font-size: 30px;
+    padding: 20px 30px;
+}
+
+.gameContainer,
+.settingsDiv {
+    margin: 0px 50px;
+}
+
+.settingsDiv {
+    display: flex;
+    justify-content: right;
+    margin-top: 2px;
+    gap: 4px;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black;
+}
+
+.roundCounter,
+#roundCount {
+    background-color: #b42b2b;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+}
+
+.playerContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 0px;
+    width: 96%;
+}
+
+#humanPlayer,
+#computerPlayer {
+    border: 1px solid black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 0px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.choiceSelector {
+    margin: 8px 4px 8px 8px;
+    border: 2px solid #b42b2b;
+    color: #b42b2b;
+    font-size: 20px;
+}
+
+.accouncements {
+    background-color: #c4c4c4;
+    width: 96%;
+    border: 1px solid black;
+    padding: 4px;
+    margin-bottom: 6px;
+}
