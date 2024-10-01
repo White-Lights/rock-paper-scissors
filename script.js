@@ -4,6 +4,23 @@ let computerScore = 0;
 let humanScore = 0;
 let tieScore = 0;
 
+const btn = document.querySelector("#humanPlayer")
+btn.addEventListener("click", (event) => {
+    if(event.target.tagName === "BUTTON") {
+        if(event.target.id === "rock") {
+            console.log("rock!");
+            humanChoice = "rock";
+        } else if(event.target.id === "scissors") {
+            console.log("scissors!");
+            humanChoice = "scissors";
+        } else if(event.target.id === "paper") {
+            console.log("paper");
+            humanChoice = "paper";
+        }
+        playRound(humanChoice, computerChoice);
+    }
+})
+
 // Function for getting the computer's choice.
 function getComputerChoice() {
     computerChoice = Math.floor(Math.random() * 3);
@@ -16,20 +33,20 @@ function getComputerChoice() {
     } else {
         computerChoice = "error";
     }
+    console.log(`Computer choice is ${computerChoice}.`)
     return computerChoice;
 }
 
-// Function for getting the player's choice.
-function getHumanChoice() {
-    humanChoice = prompt("Make your choice! Rock, paper, or scissors?").toLowerCase();
-    return humanChoice;
-}
+// function getHumanChoice() {
+//     humanChoice = prompt("Make your choice! Rock, paper, or scissors?").toLowerCase();
+//     return humanChoice;
+// }
 
 function playRound (humanChoice, computerChoice) {
     // Take both choices, log in the console who picked what.
     computerChoice = getComputerChoice();
-    humanChoice = getHumanChoice();
-    console.log("The meatbag throws " + humanChoice + " and computer throws " + computerChoice + "!");
+    // humanChoice = getHumanChoice();
+    // console.log("The meatbag throws " + humanChoice + " and computer throws " + computerChoice + "!");
     
     // Compare the two choices and return a winner. Increment score based on victor.
     if (humanChoice === computerChoice) {

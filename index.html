@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="header"><p class="headerText">ROCK PAPER SCISSORS.</p></div>
+    <div class="header"><p class="header">ROCK PAPER SCISSORS.</p></div>
 
     <div class="gameContainer">
         <div class="roundCounter"><p id="roundCount">ROUND 1.</p></div>
@@ -16,9 +15,9 @@
             <div id="humanPlayer">
                 <p id="playerName">PLAYER.</p>
                 <div>
-                    <button class="choiceSelector">R</button>
-                    <button class="choiceSelector">P</button>
-                    <button class="choiceSelector">S</button>
+                    <button class="choiceSelector" id="rock">R</button>
+                    <button class="choiceSelector" id="paper">P</button>
+                    <button class="choiceSelector" id="scissors">S</button>
                 </div> 
                 <p>SCORE: 0</p>
             </div>
@@ -35,7 +34,7 @@
         <div class="accouncements">WELCOME! TO BEGIN THE ROUND, SELECT YOUR CHOICE.</div>
     </div>
     <div class="settingsDiv">
-        <button>RESET.</button>
+        <button>RESET GAME.</button>
         <button>CHANGE NAME.</button>
     </div>
 </body>

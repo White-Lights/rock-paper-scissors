@@ -1,20 +1,16 @@
 * {
-    background: #a5a5a5;
+    background: #e4e4e4;
     margin: 0px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.header,
-.headerText {
+.header {
     background-color: #b42b2b;
     margin: 0px;
-}
-
-.header {
     margin-bottom: 100px;
 }
 
-.headerText {
+p.header {
     font-size: 30px;
     padding: 20px 30px;
 }
@@ -70,8 +66,13 @@
 .choiceSelector {
     margin: 8px 4px 8px 8px;
     border: 2px solid #b42b2b;
-    color: #b42b2b;
+    color: rgb(180, 43, 43, .5);
     font-size: 20px;
+}
+
+.choiceSelector:hover {
+    color: rgb(180, 43, 43, 1);
+
 }
 
 .accouncements {
