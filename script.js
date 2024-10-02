@@ -5,6 +5,7 @@ let computerScore = 0;
 let humanScore = 0;
 let tieScore = 0;
 let round = 1;
+let playerName = "player";
 
 const btn = document.querySelector("#humanPlayer")
 btn.addEventListener("click", (event) => {
@@ -39,7 +40,7 @@ function getComputerChoice() {
 }
 
 function playRound (humanChoice, computerChoice) {
-    if (round < 6) {
+    if (humanScore < 5 && computerScore < 5) {
         computerChoice = getComputerChoice();
         
         // Compare the two choices and return a winner. Increment score based on victor.
@@ -65,11 +66,11 @@ function playRound (humanChoice, computerChoice) {
         updateAnn(winner);
     }
 
-    if(round == 6) {
+    if(humanScore == 5 || computerScore == 5) {
         winner = "winner";
         updateAnn(winner);
-        round = 7;
-    } else if (round == 7) {
+        round = 10;
+    } else if (round == 10) {
         alert("Press reset to start a new game!");
     }
 }
@@ -91,15 +92,18 @@ function updateAnn(winner) {
     let ann = document.querySelector(".announcements");
     if(winner == "tie") {
         ann.textContent = "It's a tie! Let's try that round again!";
-    } else if(winner == "computer" | winner == "computer") {
+    } else if(winner == "player") {
+        winner = playerName;
+        ann.textContent = `And the winner is ${winner}! Let the next round begin!`;
+    } else if(winner == "computer") {
         ann.textContent = `And the winner is ${winner}! Let the next round begin!`;
     } else if(winner == "winner") {
         let rounds = document.querySelector("#roundCount");
         rounds.textContent = "Game over!";
         if(humanScore > computerScore) {
-            ann.textContent = "You've won the game! Hit reset to play agian!";
+            ann.textContent = "You've won the game! Hit reset to start a new game!";
         } else if (computerScore > humanScore) {
-            ann.textContent = "You've lost! Hit reset to try again!";
+            ann.textContent = "You've lost this time! Hit reset to start a new game!";
         }
     }
 }
@@ -120,9 +124,10 @@ let rename = document.querySelector("#rename");
 rename.addEventListener("click", renamePlayer);
 
 function renamePlayer() {
-    let name = prompt("What is your new name?");
+    playerName = prompt("What is your new name?");
     nameBox = document.querySelector("#playerName");
-    nameBox.textContent = `${name}.`
+    nameBox.textContent = `${playerName}.`;
+    return playerName;
 }
 
 // for (let round = 1; round < 6; round++) {
