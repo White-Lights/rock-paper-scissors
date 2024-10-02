@@ -2,6 +2,7 @@
     background: #e4e4e4;
     margin: 0px;
     font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
 }
 
 .header {
@@ -23,7 +24,7 @@ p.header {
 .settingsDiv {
     display: flex;
     justify-content: right;
-    margin-top: 2px;
+    margin-top: 4px;
     gap: 4px;
 }
 
@@ -75,7 +76,7 @@ p.header {
 
 }
 
-.accouncements {
+.announcements {
     background-color: #c4c4c4;
     width: 96%;
     border: 1px solid black;
