@@ -11,13 +11,10 @@ const btn = document.querySelector("#humanPlayer")
 btn.addEventListener("click", (event) => {
     if(event.target.tagName === "BUTTON") {
         if(event.target.id === "rock") {
-            console.log("rock!");
             humanChoice = "rock";
         } else if(event.target.id === "scissors") {
-            console.log("scissors!");
             humanChoice = "scissors";
         } else if(event.target.id === "paper") {
-            console.log("paper");
             humanChoice = "paper";
         }
         playRound(humanChoice, computerChoice);
@@ -70,8 +67,6 @@ function playRound (humanChoice, computerChoice) {
         winner = "winner";
         updateAnn(winner);
         round = 10;
-    } else if (round == 10) {
-        alert("Press reset to start a new game!");
     }
 }
 
