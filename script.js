@@ -124,7 +124,3 @@ function renamePlayer() {
     nameBox.textContent = `${playerName}.`;
     return playerName;
 }
-
-// for (let round = 1; round < 6; round++) {
-//     playRound(humanChoice, computerChoice);
-// }
